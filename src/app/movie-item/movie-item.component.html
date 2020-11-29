@@ -1,0 +1,12 @@
+<div class="card">
+  <img [src]="movie.coverImage" [alt]="movie.title" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">
+      <img *ngFor="let provider of movie.providers" [src]="'/assets/img/' + provider + '.png'" class="provider"
+        [alt]="provider">
+    </small>
+  </div>
+</div>

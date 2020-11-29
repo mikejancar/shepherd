@@ -1,0 +1,10 @@
+<h1>My Movies</h1>
+<div>
+  <select name="filter" id="filter" (change)="filterMovies($event.target.value)">
+    <option value="" selected></option>
+    <option *ngFor="let value of filters" value="{{value}}">{{value}}</option>
+  </select>
+</div>
+<div class="card-group">
+  <app-movie-item *ngFor="let movie of movieList$ | async" [movie]="movie"></app-movie-item>
+</div>
